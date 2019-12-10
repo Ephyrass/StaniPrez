@@ -13,7 +13,7 @@ a:hover {
 
 /* ------ HEADER --------- */
 header {
-  height: 15vh;
+  height: 25vh;
 }
 .header {
   display: flex;
@@ -93,11 +93,11 @@ nav a.nav-link:hover::before {
 /*------ SLIDER ------*/
 .slider {
   position: relative;
-  height: 75vh;
+  height: 65vh;
 }
 
 .slider img {
-  width: 25%;
+  width: 20%;
 }
 
 /*------ ABOUT ------*/
@@ -213,6 +213,9 @@ nav a.nav-link:hover::before {
 @media screen and (max-width: 770px) {
   .slider img {
     width: 35%;
+  }
+  .contact p {
+    font-size: 24px;
   }
   h1 {
     left: -30px;
