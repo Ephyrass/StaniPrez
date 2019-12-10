@@ -51,7 +51,6 @@ module.exports = {
       options: {
         spaceId: process.env.DB_SPACEID,
         accessToken: process.env.DB_TOKEN,
-        downloadLocal: true,
       },
     },
     { resolve: `gatsby-transformer-remark` },
