@@ -2,7 +2,7 @@ require("dotenv").config()
 module.exports = {
   siteMetadata: {
     title: `Stani Prez`,
-    siteUrl: `https://www.staniprez.fr`,
+    siteUrl: `https://www.staniprez.com`,
     description: `Site de Stani Prez, vente de peiture abstraite`,
     author: `Stani Prez`,
   },
