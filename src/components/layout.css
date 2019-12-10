@@ -70,7 +70,9 @@ nav a {
 nav a:hover {
   color: rgb(0, 0, 0);
 }
-
+a.nav-link {
+  padding: 0.5rem 0;
+}
 nav a.nav-link:before {
   content: "";
   position: absolute;
@@ -192,9 +194,10 @@ nav a.nav-link:hover::before {
   }
   a.nav-link {
     font-size: 18px;
+    padding: 0.5rem 0;
   }
   nav a.nav-link:before {
-    bottom: 25px;
+    bottom: 15px;
   }
 
   .stani {
@@ -204,12 +207,6 @@ nav a.nav-link:hover::before {
     font-size: 18px;
     top: -25px;
     left: 122px;
-  }
-}
-
-@media screen and (max-height: 700px) {
-  .slider img {
-    width: 15%;
   }
 }
 
@@ -278,5 +275,8 @@ nav a.nav-link:hover::before {
 @media screen and (max-width: 440px) {
   .paintItem h4 {
     padding-top: 35%;
+  }
+  .slider img {
+    width: 60%;
   }
 }
