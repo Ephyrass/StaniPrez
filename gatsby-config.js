@@ -3,7 +3,7 @@ module.exports = {
   siteMetadata: {
     title: `Stani Prez`,
     siteUrl: `https://www.staniprez.fr`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    description: `Site de Stani Prez, vente de peiture abstraite`,
     author: `Stani Prez`,
   },
   plugins: [
@@ -28,6 +28,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
+        icon: `src/images/st-icon.svg`,
       },
     },
     {
@@ -50,6 +51,7 @@ module.exports = {
       options: {
         spaceId: process.env.DB_SPACEID,
         accessToken: process.env.DB_TOKEN,
+        downloadLocal: true,
       },
     },
     { resolve: `gatsby-transformer-remark` },

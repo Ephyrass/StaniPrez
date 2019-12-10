@@ -5,6 +5,8 @@ import Slider from "../components/Slider"
 import ArrowDown from "../components/ArrowDown"
 import About from "../components/About"
 import PaintingSection from "../components/Gallerie/PaintingSection"
+import PartnerSection from "../components/Partner/PartnerSection"
+import Contact from "../components/Contact"
 
 const IndexPage = () => {
   return (
@@ -14,6 +16,8 @@ const IndexPage = () => {
       <ArrowDown />
       <About />
       <PaintingSection />
+      <PartnerSection />
+      <Contact />
     </Layout>
   )
 }

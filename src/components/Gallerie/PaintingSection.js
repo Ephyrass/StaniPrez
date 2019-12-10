@@ -1,6 +1,7 @@
-import React from "react"
+import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import PaintingItem from "./PaintingItem"
+import more from "../../images/more.svg"
 
 const PaintingSection = () => {
   const data = useStaticQuery(graphql`
@@ -10,8 +11,10 @@ const PaintingSection = () => {
           node {
             id
             price
+            cadrePrice
             size
             title
+
             img {
               id
               file {
@@ -23,6 +26,24 @@ const PaintingSection = () => {
       }
     }
   `)
+
+  const [limit, setLimit] = useState(12)
+
+  const handleclickLimit = () => {
+    setLimit(limit + 8)
+  }
+
+  const allPaint = data.allContentfulTableau.edges.map(({ node }) => (
+    <PaintingItem
+      key={node.id}
+      title={node.title}
+      size={node.size}
+      img={node.img.file.url}
+      price={node.price}
+      cadrePrice={node.cadrePrice}
+    />
+  ))
+  console.log(allPaint)
   return (
     <div className="container" id="galerie">
       <h2
@@ -50,16 +71,9 @@ const PaintingSection = () => {
         Vous pouvez ici découvrir tous mes tableaux et cliquer sur les
         différents marketplaces pour vous les procurez.{" "}
       </p>
-      <div className="row">
-        {data.allContentfulTableau.edges.map(({ node }) => (
-          <PaintingItem
-            key={node.id}
-            title={node.title}
-            size={node.size}
-            img={node.img.file.url}
-            price={node.price}
-          />
-        ))}
+      <div className="row">{allPaint.slice(0, limit)}</div>
+      <div className="load-more">
+        <img onClick={() => handleclickLimit()} src={more} alt="" />
       </div>
     </div>
   )

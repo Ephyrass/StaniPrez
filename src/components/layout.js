@@ -8,7 +8,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-
+import mention from "../doc/Mention.pdf"
+import faq from "../doc/FAQ.pdf"
 import Header from "./header"
 import "./layout.css"
 
@@ -28,7 +29,16 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata.title} />
       <div>
         <main>{children}</main>
-        <footer></footer>
+        <footer style={{ textAlign: "center" }}>
+          {" "}
+          <a href={mention} target="_blank" rel="noopener noreferrer">
+            Mentions légales
+          </a>{" "}
+          |{" "}
+          <a href={faq} target="_blank" rel="noopener noreferrer">
+            FAQ
+          </a>
+        </footer>
       </div>
     </>
   )

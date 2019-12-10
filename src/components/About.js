@@ -1,4 +1,5 @@
 import React from "react"
+import Stani from "../images/Stani.jpg"
 
 const About = () => {
   return (
@@ -23,6 +24,8 @@ const About = () => {
         >
           Stani Prez
         </p>
+
+        <img style={{ width: "50%" }} src={Stani} alt="Peintre Stani Prez" />
       </div>
     </div>
   )

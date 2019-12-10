@@ -111,25 +111,78 @@ nav a.nav-link:hover::before {
 }
 
 /*------ GALERIE ------*/
+.paintItem h4 {
+  padding-top: 5%;
+  text-align: center;
+}
 
-.painting:hover {
+.marketIcon img {
+  margin: 0% 2% 0 2%;
+  cursor: pointer;
+}
+
+#galerie {
+  padding-bottom: 5%;
+}
+.load-more {
+  text-align: center;
   opacity: 0.7;
   cursor: pointer;
 }
 
+.load-more:hover {
+  opacity: 1;
+}
+.painting {
+  width: 100%;
+}
+.painting:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
 .overlay {
-  position: fixed; /* Sit on top of the page content */
-  /* Hidden by default */
-  width: 90%; /* Full width (cover the whole page) */
-  height: 90%; /* Full height (cover the whole page) */
+  width: 100%;
+  position: fixed;
+  opacity: 0.95;
   margin: auto;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(255, 255, 255); /* Black background with opacity */
-  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-  cursor: pointer; /* Add a pointer on hover */
+  background-color: rgba(255, 255, 255);
+  z-index: 10;
+  animation: pulse 0.2s;
+}
+
+@keyframes pulse {
+  0% {
+    width: 10%;
+    height: 10%;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.overlay-container {
+  display: flex;
+}
+.paint-overlay {
+  width: 50%;
+}
+
+.para-overlay {
+  padding-top: 15%;
+  width: 50%;
+}
+/*----- CONTACT ------*/
+#contact {
+  padding-bottom: 5%;
+}
+
+#contact p {
+  margin: 0;
 }
 
 /*------ Responsive -------*/
@@ -190,5 +243,40 @@ nav a.nav-link:hover::before {
   }
   a.nav-link {
     font-size: 12px;
+  }
+}
+@media screen and (max-width: 580px) {
+  .painting {
+    max-width: 80%;
+  }
+
+  .overlay-container {
+    display: block;
+  }
+  .paint-overlay {
+    width: 100%;
+  }
+  .paint-overlay img {
+    width: 50%;
+  }
+
+  .para-overlay {
+    padding-top: 2%;
+    width: 100%;
+  }
+  .para-overlay p {
+    text-align: center;
+    font-size: 12px;
+  }
+  .paintItem h4 {
+    padding-top: 50%;
+  }
+  .marketIcon {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 440px) {
+  .paintItem h4 {
+    padding-top: 35%;
   }
 }
