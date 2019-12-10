@@ -69,7 +69,7 @@ const PaintingSection = () => {
         }}
       >
         Vous pouvez ici découvrir tous mes tableaux et cliquer sur les
-        différents marketplaces pour vous les procurez.{" "}
+        différents marketplaces pour vous les procurer.{" "}
       </p>
       <div className="row">{allPaint.slice(0, limit)}</div>
       <div className="load-more">
