@@ -78,7 +78,7 @@ nav a.nav-link:before {
   position: absolute;
   width: 0;
   height: 1px;
-  bottom: 15px;
+  bottom: 10px;
   left: 0;
   background-color: rgb(0, 0, 0);
   visibility: hidden;
