@@ -6,7 +6,7 @@ import "@brainhubeu/react-carousel/lib/style.css"
 const Slider = () => {
   const data = useStaticQuery(graphql`
     query {
-      allContentfulCarrousel {
+      allContentfulCarousel {
         edges {
           node {
             title
