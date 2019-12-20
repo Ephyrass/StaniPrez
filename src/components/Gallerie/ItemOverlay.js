@@ -8,7 +8,6 @@ function ItemOverlay({
   linkEtsy,
   linkAliexpress,
   linklbc,
-  state,
   title,
   img,
   size,
